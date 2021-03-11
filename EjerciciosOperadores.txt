@@ -1,0 +1,131 @@
+//Ejercicio 1.  Calcular el perametro y area de un rectangulo dada su base y su altura.
+
+var base = 18
+
+var altura = 10
+
+var perimetro = 2*altura + 2*base
+
+var area = base*altura
+
+print("Area del rectángulo: ", area)
+
+print("Perímetro del rectángulo: ", perimetro)
+
+
+
+//Ejercicio 3. Dados dos números, mostrar la suma, resta, division y multiplicacion de ambos.
+
+var num1 : Double = 8
+
+var num2 : Double = 5
+
+var suma = num1 + num2
+
+var resta = num1 - num2
+
+var mult = num1 * num2
+
+var div = num1/num2
+
+print("Suma: ", suma)
+
+print("Resta: ", resta)
+
+print ("Multiplicación: ", mult)
+
+print("División: ", div)
+
+
+
+//Ejercicio 4. Escribir un programa que convierta un valor dado en grados Fahrenheit a grados Celsius.
+
+var gradosFarenheit : Double = 58.4
+
+var gradosCelsius : Double = (gradosFarenheit - 32) * (5/9)
+
+print("32 grados Farenheit son", gradosCelsius, "grados Celsius")
+
+
+
+//Ejercicio 5.  Calcular la media de tres números pedidos por teclado.
+
+var nume1 : Double = 5
+
+var nume2 : Double = 5
+
+var nume3 : Double = 6
+
+var media = (nume1 + nume2 + nume3)/3
+
+print("La media de los números es: ",media)
+
+
+
+//Ejercicio 6. Un vendedor recibe un sueldo base mas un 10% extra por comision de sus ventas,
+ //el vendedor desea saber cuanto dinero obtendrá por concepto de comisiones por
+ //en cuenta su sueldo base y comisiones.
+
+var sueldo_base : Double = 1500
+
+var comision : Double  = sueldo_base * 0.1
+
+var sueldo_total : Double = sueldo_base + comision
+
+print("El dinero obtenido en sueldo y comisiones es:", sueldo_total)
+
+
+
+//Ejercicio 7. Un alumno desea saber cual será su calificación final en la materia de IOS
+//    Dicha calificación se compone de los siguientes porcentajes:
+//    * 55% del promedio de sus tres calificaciones parciales.
+//    * 30% de la calificación del examen final.
+//    * 15% de la calificación de un trabajo final.
+
+var califParcial1 : Double = 5
+
+var califParcial2 : Double = 7
+
+var califParcial3 : Double = 8
+
+var califExamenFinal : Double = 6
+
+var califTrabajoFinal : Double = 8
+
+var promCalifParciales : Double = (califParcial1 + califParcial2 + califParcial3)/3
+
+var calif1 : Double = promCalifParciales*55/100
+
+var calif2 : Double = califExamenFinal*30/100
+
+var calif3 : Double = califTrabajoFinal*15/100
+
+var notaFinal : Double = calif1 + calif2 + calif3
+
+print("La nota final es:", notaFinal)
+
+
+ //Ej8. Escribir un algoritmo para calcular la nota final de un estudiante, considerando que: por cada respuesta correcta 5 puntos, por una incorrecta -1 y por respuestas en 0
+
+var nota = 0
+
+var correctas = 7
+
+var incorrectas = 5
+
+var total = (correctas * 5) + (incorrectas * (-1))
+
+print("La nota Final es: " , total)
+
+
+ //Ej9. Calcula el sueldo de un trabajador, cuyo valor es su sueldo base mas un numero de horas extra trabajadas, pero teniendo en cuenta que el dicho numero de horas puede ser nulo
+
+var sueldo_base = 1600.0
+
+var horas : Double! = 4 
+
+var precio_horas = (horas ?? 0) * 8
+
+var total_sueldo = sueldo_base + precio_horas
+
+print("Su sueldo es: " , total_sueldo)

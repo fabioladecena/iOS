@@ -1,0 +1,189 @@
+//Ejercicio 1. Algoritmo que pida un número y diga si es positivo, negativo o 0.
+
+var num = 1
+
+if num >= 0 {
+    print("Positivo")
+
+}else if num < 0 {
+    print("negativo")
+
+}else{
+    print("el numero es 0")
+}
+
+
+//Ejercicio 2. Escribe un programa que lea un número e indique si es par o impar.
+
+var num = 9
+
+if (num % 2 == 0) {
+    print("Par")
+
+} else {
+    print("Impar")
+}
+
+
+//Ejercicio 3. Escribe un programa que dado un nombre de usuario y una contraseña
+//y si se ha introducido "pepe" y "asdasd" se indica "Has entrado al sistema",
+
+var usuario = "pepe"
+
+var password = "asdasd"
+
+if (usuario == "pepe" && password == "asdasd"){
+    print("Has entrado al sistema")
+
+} else {
+    print("El usuario o contraseña es incorrecto")
+}
+
+
+//Ejercicio 4. Programa que dada una cadena por teclado y compruebe si la primera letra es un "/"
+//y la segunda un "*", en caso afirmativo se escribira la palabra entera, en caso contrario
+//escribir "no es correcta".
+
+var palabra = "/*hey"
+
+var index = palabra.index(after: palabra.startIndex)
+
+if (palabra[palabra.startIndex] == "/" && palabra[index] == "*"){
+    print(palabra)
+
+} else {
+    print("No es correcta")
+}
+
+
+//Ejercicio 5. Algoritmo que dado tres números y los muestre ordenados (de mayor a menor).
+
+var num1 = 4, num2 = 14, num3 = 12
+
+var numeros = [num1 , num2 , num3]
+
+numeros.sort()
+
+for i in numeros {
+    print(i)
+}
+
+
+//Ejercicio 6. Algoritmo que pida los puntos centrales x1,y1,x2,y2 y los radios r1,r2 de dos circunferencias y las clasifique en uno de estos estados:
+//exteriores
+//tangentes exteriores
+//secantes
+//tangentes interiores
+//interiores
+//concéntricas
+//Repetitivas
+
+var x1 = 3.0
+var x2 = 5.0
+
+var y1 = 4.0
+var y2 = 2.0
+
+var r1 = 6.0
+var r2 = 4.0
+
+var distanciaCentros = sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2))
+var sumarRadios = r1 + r2
+var restarRadios = r1 - r2
+
+if distanciaCentros == 0 {
+    print("Concentricas")
+    
+}else if sumarRadios == distanciaCentros {
+    print("Tangentes exteriores")
+    
+}else if restarRadios == distanciaCentros{
+    print("Tangentes interiores")
+    
+}else if distanciaCentros < sumarRadios {
+    print("Secantes")
+    
+}else if distanciaCentros > sumarRadios {
+    print("Exteriores")
+    
+}else{
+    print("Interiores")
+}
+
+//Ejercicio 7. Crea una aplicación que pida un número y calcule su factorial (El factorial de
+//un número es el producto de todos los enteros entre 1 y el propio número y se
+//representa por el número seguido de un signo de exclamación.
+
+var num = 8
+var factorial = 1
+
+while num != 0{
+
+	factorial *= num
+	num = num - 1
+}
+
+print(factorial)
+
+
+//Ejercicio 8. Algoritmo que cree un array con 10 numeros. Debe imprimir la suma
+// y la media de todos los números introducidos.
+
+var numArray = [4,6,9,1,9,0,2,5,1,20]
+
+var sumaTotal = 0
+
+for i in numArray {
+	sumaTotal = sumaTotal + numArray[i-1]
+}
+var media = sumaTotal / numArray.count
+
+print("La suma total:", sumaTotal)
+
+print("La media:", media)
+
+
+//Ejercicio 9. //Algoritmo que cree un array con 10 numeros. El programa debe informar de cuantos números
+//introducidos son mayores que 0, menores que 0 e iguales a 0.
+
+var numArray = [1,7,-2,10,-8,3,22,-11,0,5]
+
+var numIguales = 0
+var numMenores = 0
+var numMayores = 0
+
+for i in numArray{
+
+    if i < 0 {
+        numMenores+=1
+
+    }else if i == 0{
+        numIguales+=1
+
+    }else{
+        numMayores+=1
+    }
+}
+
+print("Numeros menores que 0:", numMenores)
+
+print("Numeros iguales a 0:", numIguales)
+
+print("Numeros mayores a 0:", numMayores)
+
+//Ejercicio 10. Escribir un programa que imprima todos los números pares entre dos números
+
+var num1 = 7
+var num2 = 24
+var numPar = 0
+
+var numerosPares_lista = [Int]()
+
+for index in num1...num2  {
+    if index % 2 == 0 {
+        numPar += 1
+        numerosPares_lista.append(index)
+    }
+}
+print("Hay", numPar, "numeros pares entre", num1, "y", num2)
+print("Son los siguientes:", numerosPares_lista)

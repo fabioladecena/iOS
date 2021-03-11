@@ -1,0 +1,41 @@
+class Ordenador{
+    var precio : Int = 0
+    var nombre : String = ""
+    var ram = Ram()
+    var procesador = Procesador()
+    var almacenamiento = Almacenamiento()
+    var tarjetaGrafica = Grafica()
+}
+class Ram{
+    var capacidad = "16Gb"
+    var fabricante = "Corsair"
+    var rgb = "Si"
+}
+class Procesador{
+    var velocidad = "2,90GHz"
+    var cores = 6
+    var hilos = 12
+    var fabricante = "Intel"
+}
+class Almacenamiento{
+    var capacidad = "512Gb"
+    var fabricante = "SMS"
+    var unidad = "SSD"
+}
+class Grafica{
+    var consumo = 1200
+    var cores = 8
+    var velocidad = "2,3GHz"
+}
+var ram2 = Ram()
+var p = Procesador()
+var a = Almacenamiento()
+var g = Grafica()
+var pc = Ordenador()
+pc.precio = 400
+pc.nombre = "ABBG"
+pc.ram = ramm
+pc.procesador = pro
+pc.almacenamiento = alm
+pc.tarjetaGrafica = gfc
+print(pc.precio,pc.nombre,pc.ram.capacidad,pc.ram.fabricante,pc.ram.rgb,pc.procesador.cores,pc.procesador.fabricante,pc.procesador.hilos,pc.procesador.velocidad,pc.almacenamiento.unidad,pc.almacenamiento.capacidad,pc.almacenamiento.fabricante,pc.tarjetaGrafica.velocidad,pc.tarjetaGrafica.consumo,pc.tarjetaGrafica.cores)
